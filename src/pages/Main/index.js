@@ -1,9 +1,14 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Title } from './styles';
 
 function Main() {
-  return <h1>Main</h1>;
+  return (
+    <Title error={false}>
+      Main
+      <small>Little Quote</small>
+    </Title>
+  );
 }
 
 export default Main;
