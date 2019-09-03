@@ -15,7 +15,7 @@ export const Container = styled.div`
     align-items: center;
 
     svg {
-      margin-rigth: 10px;
+      margin-right: 10px;
     }
   }
 `;
@@ -24,6 +24,25 @@ export const Form = styled.div`
   margin-top: 30px;
   display: flex;
   flex-direction: row;
+
+  input {
+    flex: 1;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
 `;
 
-export const SubmitButton = styled.div``;
+export const SubmitButton = styled.button.attrs({
+  type: 'submit',
+})`
+  background: #7159c1;
+  border: 0;
+  padding: 0 15px;
+  margin-left: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-item: center;
+`;
