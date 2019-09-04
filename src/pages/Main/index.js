@@ -18,7 +18,11 @@ export default class Main extends Component {
   handleSubmit = async e => {
     e.preventDefault();
 
-    console.log(this.state.newRepo);
+    const { newRepo } = this.state;
+
+    const response = await api.get(`/repos/${newRepo}`);
+
+    console.log(response.data);
   };
 
   render() {
