@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { FaGithubAlt, FaPlus } from 'react-icons/fa';
 
+import api from '../../services/api';
+
 import { Container, Form, SubmitButton } from './styles';
 
 export default class Main extends Component {
@@ -13,8 +15,10 @@ export default class Main extends Component {
     this.setState({ newRepo: e.target.value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
+
+    console.log(this.state.newRepo);
   };
 
   render() {
