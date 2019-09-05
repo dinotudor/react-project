@@ -22,8 +22,14 @@ export default class Repository extends Component {
         },
       }),
     ]);
+    this.setState({
+      repository: repository.data,
+      issues: issues.data,
+      loading: false,
+    });
   }
   render() {
+    const { respository, issues, loading } = this.state;
     return <h1>Repository</h1>;
   }
 }
