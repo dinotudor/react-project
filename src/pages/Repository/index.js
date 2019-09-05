@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import api from '../../services/api';
 
-import { Loading } from './styles';
+import { Loading, Owner } from './styles';
+
+import Container from '../../components/Container';
 
 export default class Repository extends Component {
   static propTypes = {
@@ -40,12 +42,20 @@ export default class Repository extends Component {
     });
   }
   render() {
-    const { respository, issues, loading } = this.state;
+    const { repository, issues, loading } = this.state;
 
     if (loading) {
       return <Loading>Loading</Loading>;
     }
 
-    return <h1>Repository</h1>;
+    return (
+      <Container>
+        <Owner>
+          <img src={repository.owner.avatar_url} alt={repository.owner.name} />
+          <h1>{repository.name}</h1>
+          <p>{repository.description}</p>
+        </Owner>
+      </Container>
+    );
   }
 }
