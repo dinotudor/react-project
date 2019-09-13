@@ -63,13 +63,13 @@ export default class Main extends Component {
       <Container>
         <h1>
           <FaGithubAlt />
-          Respositorios
+          Repositories
         </h1>
 
         <Form onSubmit={this.handleSubmit}>
           <input
             type="text"
-            placeholder="Adicionar repositório"
+            placeholder="Add repository"
             value={newRepo}
             onChange={this.handleInputChange}
           />
